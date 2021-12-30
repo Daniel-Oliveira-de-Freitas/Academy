@@ -1,7 +1,8 @@
 @charset "UTF-8";
 *{margin: 0; padding: 0; box-sizing: border-box;}
-nav{height: 100px; color: #ffffff}
+nav{height: 100px; color: #ffffff; text-transform:  uppercase;}
 a{cursor: pointer; font-weight: bold;}
+a.btn-nav:hover{color: #BA68C8;}
 .neo-section{
 	min-height: 780px;
 	background-size: cover !important;
@@ -26,4 +27,12 @@ a{cursor: pointer; font-weight: bold;}
 .botoes{padding: 2% 15%;}
 .btn:hover {color: #CE93D8; background-color: rgba(0,0,0,0.5);}
 .rodape{color: white; background-color: #4527A0; text-align: center;}
+
+/*Responsividade*/
+@media screen and (max-width: 667px){
 	
+	.wm{width: 100%;}
+	nav{height: 100%;}
+	.neo-container{margin-top: 120px;}
+	
+}
