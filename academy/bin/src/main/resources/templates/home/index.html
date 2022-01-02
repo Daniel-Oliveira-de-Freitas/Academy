@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewpot" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<title>Home</title>
+<meta name="author" content="Daniel"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+	<header>
+
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#4527A0 ">
+			<a class="navbar-brand" href="#"> 
+			   <img src="img/Logo-header.png" width="300px" height="100px"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"	data-target="#navMobile">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navMobile" class="navbar-collapse collapse justify-content-end">
+
+				<a class="btn-nav nav-item nav-link"th:href="@{/}"><i class=" fas fa-home"></i> Home</a> 
+				<a class="btn-nav nav-item nav-link" th:href="@{cadastrarAluno}"><i class=" fas fa-user-graduate"></i> Cadastrar Aluno</a> 
+				<a class="btn-nav nav-item nav-link" th:href="@{PesquisarAluno}" ><i class=" fas fa-search"></i> Pesquisar Aluno</a>
+				<a class="btn-nav nav-item nav-link" th:href="@{login}"><i class=" fas fa-user-login"></i> Login</a> 				
+				<form th:action="@{/logout}" method="post">
+				<button class="nav-item nav-link btn-danger" type="submit" ><i class="fas fa-times"></i> Sair</button>
+				</form>
+			</div>
+
+		</nav>
+
+	</header>
+	
+	<section class="neo-section" style="background-image: url('img/bg-index.jpg');">
+	<div class="sombra"></div>   
+	
+	<div class="center neo-container">
+		<h1 class="texto-centro">Sistema de Gerenciamento de Alunos</h1>
+	
+	
+	<div class="botoes">
+	<div class="wm">
+		<h5 class="btn">CADASTRAR ALUNO</h5>
+	</div>
+	
+	<div class="wm">
+		<h5 class="btn justify-content-center">PESQISAR ALUNO</h5>
+	</div>
+	
+	<div class="clear"></div>
+	</div>
+	</div>
+	</section>
+	
+	<footer>
+	<div class="rodape">
+		<span>Todos os direitos reservados - 2021 &copy; Daniel Oliveira de Freitas</span>	
+	</div>
+	</footer>
+		
+	
+	
+	<script src="/webjars/jquery-3.4.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

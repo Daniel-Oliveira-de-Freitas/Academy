@@ -13,30 +13,7 @@
 <body>
 
 
-	<header>
-
-		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#4527A0 ">
-			<a class="navbar-brand" href="#"> 
-			   <img src="img/Logo-header.png" width="300px" height="100px"/>
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"	data-target="#navMobile">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div id="navMobile" class="navbar-collapse collapse justify-content-end">
-
-				<a class="btn-nav nav-item nav-link"th:href="@{/}"><i class=" fas fa-home"></i> Home</a> 
-				<a class="btn-nav nav-item nav-link" th:href="@{cadastrarAluno}"><i class=" fas fa-user-graduate"></i> Cadastrar Aluno</a> 
-				<a class="btn-nav nav-item nav-link" th:href="@{PesquisarAluno}" ><i class=" fas fa-search"></i> Pesquisar Aluno</a>
-				<a class="btn-nav nav-item nav-link" th:href="@{login}"><i class=" fas fa-user-login"></i> Login</a> 				
-				<form th:action="@{/logout}" method="post">
-				<button class="nav-item nav-link btn-danger" type="submit" ><i class="fas fa-times"></i> Sair</button>
-				</form>
-			</div>
-
-		</nav>
-
-	</header>
+	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
 	
 	<section class="neo-section" style="background-image: url('img/bg-index.jpg');">
 	<div class="sombra"></div>   
@@ -59,11 +36,7 @@
 	</div>
 	</section>
 	
-	<footer>
-	<div class="rodape">
-		<span>Todos os direitos reservados - 2021 &copy; Daniel Oliveira de Freitas</span>	
-	</div>
-	</footer>
+	<div th:replace="fragmentos/fragmentos :: rodape"></div>
 		
 	
 	
