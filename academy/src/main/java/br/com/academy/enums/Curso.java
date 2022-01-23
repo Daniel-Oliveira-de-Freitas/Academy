@@ -6,6 +6,7 @@ public enum Curso {
 	CIENCIADACOMPUTACAO("Ciência da Computação"),
 	INFORMATICA("Informática"),
 	ENGENHARIAMECANICA("Engenharia Mecânica"),
+	JAIME("jAIME"),
 	ENGENHARIACIVIL("Engenharia Civil");
 	
 	private String curso;

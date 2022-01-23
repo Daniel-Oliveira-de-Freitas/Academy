@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewpot" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-<title>+ Inserir Alunos</title>
+<title>+ Lista de Alunos</title>
 <meta name="author" content="Daniel"/>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <script src="https://kit.fontawesome.com/006642858d.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
 </head>
@@ -25,6 +25,7 @@
 			<th scope="col">Matricula</th>
 			<th scope="col">Status</th>
 			<th scope="col">Turno</th>
+			<th scope="col">Ação</th>
 		</thead>
 		<tbody>
 			<tr scope="row" th:each="alunos : ${alunosList}">
@@ -34,6 +35,16 @@
 					<td th:text="${alunos.matricula}"></td>
 					<td th:text="${alunos.status}"></td>
 					<td th:text="${alunos.turno}"></td>
+					
+					<td>
+					
+					<a type="button" class="btn btn-warning btn-sm" th:ref="@{/alterar/{id}(id=${alunos.id})">
+					<i class="fas fa-edit"></i> Editar</a>
+					
+					<a class="btn btn-danger btn-sm" th:ref="@{/excluir/{id}(id=${alunos.id})">
+					<i class="fas fa-times"></i> Excluir</a>
+					
+					</td>
 			
 			</tr>
 		

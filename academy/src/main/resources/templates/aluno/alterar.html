@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewpot" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-<title>+ Inserir Alunos</title>
+<title>+ Alterar Alunos</title>
 <meta name="author" content="Daniel"/>
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://kit.fontawesome.com/006642858d.js"></script>
@@ -16,11 +16,12 @@
 
 		<div class="container" style="margin-top: 50px;">
 		
-		<h4> + Inserir Alunos </h4>
+		<h4> + Alterar dados do Alunos </h4>
 		<hr>
 		<br>
 			
-			<form method="post" action="/InsertAlunos" th:object="${aluno}" autocomplete="off">
+			<form method="post" action="/alterar" th:object="${aluno}" autocomplete="off">
+			<input type="hidden" th:field="*{id}">
 			
 			<!-- inseri nome do aluno  -->
 			<div class="row">
@@ -47,7 +48,7 @@
 			<div class="row">
 				<div class="col-md-6 form-group offset-md-3">
 				<label>Gerar Matricula:</label>
-					<input class="form-control" id="" th:field= "*{matricula}">
+					<input readonly="readonly" class="form-control" id="" th:field= "*{matricula}">
 					<button type="button" onclick="GerarMatricula();" class="btn-outline-dark" style="margin-top: 10px;">Gerar</button>
 			    </div>
 			</div>
